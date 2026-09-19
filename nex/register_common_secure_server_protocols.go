@@ -3,6 +3,7 @@ package nex
 import (
 	"github.com/PretendoNetwork/miracle-cure/database"
 	"github.com/PretendoNetwork/miracle-cure/globals"
+	"github.com/PretendoNetwork/nex-go/v2/types"
 	common_match_making "github.com/PretendoNetwork/nex-protocols-common-go/v2/match-making"
 	common_match_making_ext "github.com/PretendoNetwork/nex-protocols-common-go/v2/match-making-ext"
 	common_matchmake_extension "github.com/PretendoNetwork/nex-protocols-common-go/v2/matchmake-extension"
@@ -21,6 +22,9 @@ func registerCommonSecureServerProtocols() {
 	secureProtocol := secure.NewProtocol()
 	globals.SecureEndpoint.RegisterServiceProtocol(secureProtocol)
 	commonSecureProtocol := common_secure.NewCommonProtocol(secureProtocol)
+	commonSecureProtocol.CreateReportDBRecord = func(pid types.PID, reportID types.UInt32, reportData types.QBuffer) error {
+		return nil
+	}
 	commonSecureProtocol.EnableInsecureRegister()
 
 	natTraversalProtocol := nat_traversal.NewProtocol()
