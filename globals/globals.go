@@ -1,12 +1,9 @@
 package globals
 
 import (
-	pbfriends "github.com/PretendoNetwork/grpc/go/friends"
 	"github.com/PretendoNetwork/nex-go/v2"
 	common_globals "github.com/PretendoNetwork/nex-protocols-common-go/v2/globals"
 	"github.com/PretendoNetwork/plogger-go"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/metadata"
 )
 
 var Logger *plogger.Logger
@@ -17,9 +14,5 @@ var AuthenticationEndpoint *nex.PRUDPEndPoint
 
 var SecureServer *nex.PRUDPServer
 var SecureEndpoint *nex.PRUDPEndPoint
-
-var GRPCFriendsClientConnection *grpc.ClientConn
-var GRPCFriendsClient pbfriends.FriendsClient
-var GRPCFriendsCommonMetadata metadata.MD
 
 var MatchmakingManager *common_globals.MatchmakingManager
