@@ -53,7 +53,4 @@ All configuration options are handled via environment variables
 | `PN_CURE_ACCOUNT_GRPC_HOST`          | Host name for your account server gRPC service                                                                      | Yes                                           |
 | `PN_CURE_ACCOUNT_GRPC_PORT`          | Port for your account server gRPC service                                                                           | Yes                                           |
 | `PN_CURE_ACCOUNT_GRPC_API_KEY`       | API key for your account server gRPC service                                                                        | No (Assumed to be an open gRPC API)           |
-| `PN_CURE_FRIENDS_GRPC_HOST`          | Host name for your friends server gRPC service                                                                      | Yes                                           |
-| `PN_CURE_FRIENDS_GRPC_PORT`          | Port for your friends server gRPC service                                                                           | Yes                                           |
-| `PN_CURE_FRIENDS_GRPC_API_KEY`       | API key for your friends server gRPC service                                                                        | No (Assumed to be an open gRPC API)           |
 | `PN_CURE_HEALTH_CHECK_PORT`          | Port for the UDP health check                                                                                       | No                                            |
